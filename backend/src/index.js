@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const dotenv = require('dotenv')
 const authRoutes = require('./routes/authRoutes')
+const productRoutes = require('./routes/productRoutes')
 
 dotenv.config()
 
@@ -13,6 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/api/auth', authRoutes)
+app.use('/api/products', productRoutes)
 
 app.get("/", (req, res) => {
     res.json({message: 'Server is running'})

@@ -132,7 +132,7 @@ model Order_status_history {
 
 model Payment {
   id Int @id @default(autoincrement())
-  trans_id String
+  trans_id String @unique
   method String
   status String
   paid_at DateTime?

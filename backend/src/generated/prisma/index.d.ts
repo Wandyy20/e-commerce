@@ -16707,16 +16707,16 @@ export namespace Prisma {
 
   export type PaymentWhereUniqueInput = Prisma.AtLeast<{
     id?: number
+    trans_id?: string
     AND?: PaymentWhereInput | PaymentWhereInput[]
     OR?: PaymentWhereInput[]
     NOT?: PaymentWhereInput | PaymentWhereInput[]
-    trans_id?: StringFilter<"Payment"> | string
     method?: StringFilter<"Payment"> | string
     status?: StringFilter<"Payment"> | string
     paid_at?: DateTimeNullableFilter<"Payment"> | Date | string | null
     orderId?: IntFilter<"Payment"> | number
     order?: XOR<OrderScalarRelationFilter, OrderWhereInput>
-  }, "id">
+  }, "id" | "trans_id">
 
   export type PaymentOrderByWithAggregationInput = {
     id?: SortOrder

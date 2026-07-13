@@ -8,7 +8,7 @@ export default function Navbar() {
   const [search, setSearch] = useState('')
   const router = useRouter()
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     if(search.trim()) {
       router.push(`/products?search=${search}`)

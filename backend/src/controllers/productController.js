@@ -2,7 +2,16 @@ const prisma = require('../utils/prisma')
 
 const getAllProducts = async(req, res) => {
   try {
+    const { search, category } = req.query
     const products = await prisma.product.findMany({
+      where: {
+        ...(search && {
+          name: { contains: search, mode: 'insensitive'}
+        }),
+        ...(category && {
+          category: { slug: category }
+        })
+      },
       include: {
         category: true,
         product_images: true,

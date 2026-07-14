@@ -48,7 +48,7 @@ async function main() {
       description: "Kaos oversize dengan desain vintage yang stylish",
       base_price: 129000,
       category_id: tshirt.id,
-      image: "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500",
+      image: "https://images.unsplash.com/photo-1661110546801-cfe548af5705?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=500",
       variants: [
         { size: "M", color: "Abu-abu", stock: 10, price: 129000 },
         { size: "L", color: "Abu-abu", stock: 8, price: 129000 },
@@ -78,7 +78,7 @@ async function main() {
       description: "Kaos polo berbahan pique cotton, cocok untuk casual dan semi-formal",
       base_price: 159000,
       category_id: tshirt.id,
-      image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=500",
+      image: "https://images.unsplash.com/photo-1625910513399-c9fcba54338c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=500",
       variants: [
         { size: "S", color: "Putih", stock: 8, price: 159000 },
         { size: "M", color: "Putih", stock: 10, price: 159000 },
@@ -241,7 +241,7 @@ async function main() {
       description: "Hoodie berbahan fleece tebal, hangat dan nyaman",
       base_price: 259000,
       category_id: hoodie.id,
-      image: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500",
+      image: "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=500",
       variants: [
         { size: "M", color: "Hitam", stock: 10, price: 259000 },
         { size: "L", color: "Hitam", stock: 8, price: 259000 },
@@ -256,7 +256,7 @@ async function main() {
       description: "Hoodie dengan resleting depan, desain klasik dan stylish",
       base_price: 289000,
       category_id: hoodie.id,
-      image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=500",
+      image: "https://images.unsplash.com/photo-1564858775545-e2d21c3ceee0?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=500",
       variants: [
         { size: "M", color: "Navy", stock: 8, price: 289000 },
         { size: "L", color: "Navy", stock: 6, price: 289000 },

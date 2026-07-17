@@ -1,22 +1,30 @@
 const prisma = require('../utils/prisma')
 
 const getAllCart = async(req, res) => {
-    try{
-        const userId = req.user.id
-        const cart = await prisma.cart.findUnique({
-            where: { userId },
-            include: {
-                cart_items: {
-                    include: {
-                        product_variant: true
-                    }
+  try {
+    const userId = req.user.id
+    const cart = await prisma.cart.findUnique({
+      where: { userId },
+      include: {
+        cart_items: {
+          include: {
+            product_variant: {
+              include: {
+                product: {
+                  include: {
+                    product_images: true
+                  }
                 }
+              }
             }
-        })
-        res.json(cart)
-    }catch(error){
-        res.status(500).json({ message: error.message })
-    }
+          }
+        }
+      }
+    })
+    res.json(cart)
+  } catch(error) {
+    res.status(500).json({ message: error.message })
+  }
 }
 
 const addToCart = async(req, res) => {

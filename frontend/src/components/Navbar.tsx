@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="border-b border-gray-200 bg-white sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-8 flex items-center h-16 gap-40">
+      <div className="max-w-7xl mx-auto px-8 flex items-center h-16 gap-40">
 
         <Link href="/" className="text-xl font-bold tracking-widest uppercase shrink-0">
           FashionStore
@@ -43,7 +43,7 @@ export default function Navbar() {
           <Link href="/cart">
             <ShoppingCart size={20} className="hover:text-gray-500 transition cursor-pointer" />
           </Link>
-          <Link href="/login">
+          <Link href="/profile">
             <User size={20} className="hover:text-gray-500 transition cursor-pointer" />
           </Link>
         </div>

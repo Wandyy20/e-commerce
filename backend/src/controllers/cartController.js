@@ -42,7 +42,7 @@ const addToCart = async(req, res) => {
         const existItems = await prisma.cart_item.findFirst({
             where: {
                 cartId: cart.id,
-                variantId: variant_id
+                variantId: parseInt(variant_id)
             }
         })
         if(existItems){

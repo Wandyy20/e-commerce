@@ -98,7 +98,23 @@ const getMyOrders = async (req, res) => {
     try{
         const userId = req.user.id 
         const orders = await prisma.order.findMany({
-            where: {userId}
+            where: {userId},
+            include: {
+              order_items: {
+                include: {
+                  product_variant: {
+                    include: {
+                      product: {
+                        include: {
+                          product_images: true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            orderBy: { created_at: 'desc' }
         })
         res.json({orders})
     }catch(error){

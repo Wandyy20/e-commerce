@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import api from '@/lib/api'
+import Image from 'next/image'
 
 type Order = {
   id: number
@@ -119,16 +120,17 @@ export default function OrdersPage() {
               </div>
             </div>
 
-            {/* Order Items */}
             <div className="px-6 py-4 flex flex-col gap-3">
               {order.order_items.map((item) => (
                 <div key={item.id} className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded overflow-hidden shrink-0">
+                  <div className="relative w-12 h-12 bg-gray-100 rounded overflow-hidden shrink-0">
                     {item.product_variant?.product?.product_images?.[0] && (
-                      <img
+                      <Image
                         src={item.product_variant.product.product_images[0].image_url}
                         alt={item.product_variant.product.name}
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="48px"
+                        className="object-cover"
                       />
                     )}
                   </div>

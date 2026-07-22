@@ -22,7 +22,7 @@ app.use('/api/products', productRoutes)
 app.use('/api/cart', cartRoutes)
 app.use('/api/orders', orderRoutes)
 app.use('/api/categories', categoryRoutes)
-app.use('/api/address', require())
+app.use('/api/addresses', addressRoutes)
 
 app.get("/", (req, res) => {
     res.json({message: 'Server is running'})
